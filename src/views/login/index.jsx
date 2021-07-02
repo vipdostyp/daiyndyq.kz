@@ -1,0 +1,29 @@
+import { useState } from 'react';
+import './login.css';
+
+const Login = ({onSubmit}) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const login = async (e) => {
+        e.preventDefault();
+        const api = await onSubmit(email, password);
+
+        console.log(api)
+    }
+
+    return (
+        <section className='login-box box container'>
+            <div className='login-block'>
+                <div className='login-block-title'>Сайтқа кіру</div>
+                <form onSubmit={login} className='login-block-form'>
+                    <input type='email' placeholder='E-mail' onChange={(e) => {setEmail(e.target.value)}}/>
+                    <input type='password' placeholder='Құпия сөз' onChange={(e) => {setPassword(e.target.value)}}/>
+                    <button className='button-2' type='submit'>Сайтқа кіру</button>
+                </form>
+            </div>
+        </section>
+    );
+}
+
+export default Login;

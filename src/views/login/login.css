@@ -1,0 +1,27 @@
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-block {
+    width: 250px;
+    background: #fff;
+    box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+    padding: 30px;
+}
+.login-block-title {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+}
+
+
+.login-block-form {
+    display: flex;
+    flex-direction: column;
+}
+.login-block-form > input {
+    margin-bottom: 25px;
+}
+.login-block-form > button {
+    padding: 12.5px 15px;
+}

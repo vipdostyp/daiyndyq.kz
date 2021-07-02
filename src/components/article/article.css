@@ -1,0 +1,46 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+    margin-bottom: 30px;
+}
+article:hover .article-image > img {
+    transform: scale(1.1);
+}
+.article-image {
+    overflow: hidden;
+    position: relative;
+    transition: 0.35s;
+}
+.article-image > img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: 0.35s;
+}
+.article-content {
+    padding: 25px;
+}
+.article-title {
+    font-size: 1.25em;
+    margin-bottom: 15px;
+}
+.article-description {
+    color: grey;
+}
+.article-info {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.article-info-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.article-info-item > svg {
+    width: 20px;
+    margin-right: 5px;
+}
