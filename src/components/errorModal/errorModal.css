@@ -1,0 +1,24 @@
+.error-modal-box {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error-modal-block {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+}
+.error-modal-title {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+.error-modal-description {
+    margin: 15px 0;
+}

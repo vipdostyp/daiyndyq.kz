@@ -14,6 +14,7 @@ import SinglePost from 'controllers/singlePost';
 import Login from 'controllers/login';
 import Register from 'controllers/register';
 import Profile from 'controllers/profile';
+import ProfileEdit from 'controllers/profileEdit';
 
 axios.defaults.baseURL = 'https://api.daiyndyq.kz';
 
@@ -29,6 +30,7 @@ const App = () => {
                 <QuestRoute path='/login' component={Login}/>
                 <QuestRoute path='/register' component={Register}/>
 
+                <UserRoute path='/profile/edit' component={ProfileEdit}/>
                 <UserRoute path='/profile' component={Profile}/>
             </Switch>
         </div>

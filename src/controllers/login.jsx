@@ -1,19 +1,31 @@
 import { store } from 'store';
 import { setAuth } from 'store/userReducer';
-import { useSelector } from 'react-redux';
+
 import axios from 'axios';
+import Cookies from 'universal-cookie';
 
 import View from 'views/login';
 
+const cookies = new Cookies();
+
 const Login = () => {
-    return <View onSubmit={onSubmit}/>;
+    document.title = 'Сайтқа кіру - Daiyndyq.kz';
+    return <View loginAction={loginAction}/>;
 }
 
-const onSubmit = async (email, password) => {
+const loginAction = async (email, password) => {
     if(!email || !password) return {status: false, error: 'Барлық жолдарды толтырыңыз!'}
+
     const api = (await axios.post('/account/login', {email: email, password: password})).data;
-    if(!api.status) return {status: false, error: api.description};
-    return {status: true, data: api.description}
+
+    if(api.status) {
+        cookies.set('user_id', api.data.user_id, { path: '/' });
+        cookies.set('token', api.data.token, { path: '/' });
+        store.dispatch(setAuth(true));
+        return {status: true};
+    } else {
+        return {status: false, error: api.description};
+    }
 }
 
 export default Login;

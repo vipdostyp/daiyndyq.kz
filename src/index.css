@@ -41,6 +41,7 @@ section.box {
     border: 1px solid var(--purple);
     color: var(--purple);
     transition: 0.35s;
+    text-align: center;
 }
 .button:hover {
     background: var(--purple);
@@ -48,6 +49,7 @@ section.box {
 }
 
 .button-2 {
+    text-align: center;
     background: var(--purple);
     display: block;
     padding: 8px 15px;
@@ -61,7 +63,7 @@ section.box {
     color: #fff;
 }
 
-input, select {
+input {
     width: 100%;
     background: var(--grey);
     padding: 15px;
@@ -69,4 +71,18 @@ input, select {
     outline: none;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.select {
+    width: 100%;
+    background: var(--grey);
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.select  > select {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
 }
