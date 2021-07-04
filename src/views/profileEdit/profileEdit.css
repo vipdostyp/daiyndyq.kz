@@ -4,3 +4,37 @@
     grid-gap: 30px;
     align-items: flex-start;
 }
+.profile-edit-block {
+    background: #fff;
+    box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-gap: 25px;
+    align-items: flex-start;
+}
+.profile-edit-avatar {
+    display: flex;
+    flex-direction: column;
+}
+.profile-edit-avatar > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+.profile-edit-avatar > input {
+    display: none;
+}
+.profile-edit-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+}
+.profile-edit-item > label {
+    display: block;
+    margin-bottom: 10px;
+}
+.profile-edit-item {
+
+}
