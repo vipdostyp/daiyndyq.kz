@@ -1,5 +1,5 @@
 :root {
-    --purple: #845ef7;
+    --purple: #7e75b3;
     --red: #ff6b6b;
     --green: #20c997;
     --grey: #efefef;
@@ -15,12 +15,24 @@ a {
     color: #000;
     text-decoration: none;
 }
-body {
+html, body {
     background: #f6f6f6;
+    height: 100%;
 }
 .container {
     width: 1080px;
+    min-width: 1080px;
+    padding: 0 15px;
     margin: 0 auto;
+}
+#app {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.content {
+    flex: 1 0 auto;
 }
 section {
     display: grid;
@@ -66,10 +78,10 @@ section.box {
     color: #fff;
 }
 button {
-    font-size: 16px;
+    font-size: 15px;
 }
 
-input {
+input, textarea {
     width: 100%;
     background: var(--grey);
     padding: 15px;
@@ -77,6 +89,9 @@ input {
     outline: none;
     border-radius: 5px;
     box-sizing: border-box;
+}
+textarea {
+    resize: none;
 }
 
 .select {
@@ -91,4 +106,8 @@ input {
     border: none;
     background: transparent;
     outline: none;
+}
+option {
+    background: #fff;
+    border: none;
 }

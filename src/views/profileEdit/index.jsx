@@ -11,13 +11,21 @@ const ProfileEdit = ({data}) => {
         console.log({firstName, lastName})
     }
 
+    const changeFile = (e) => {
+        try {
+            setAvatar(URL.createObjectURL(e.target.files[0]));
+        } catch (error) {
+            return;
+        }
+    }
+
     return (
         <section className='profile-edit-box box container'>
             <form onSubmit={onSubmit} className='profile-edit-block'>
                 <div className='profile-edit-avatar'>
                     <img src={avatar} alt='avatar'/>
                     <label className='profile-edit-avatar-new button' htmlFor='upload-avatar'>Жаңасын жүктеу</label>
-                    <input type='file' id='upload-avatar' onChange={e => setAvatar(URL.createObjectURL(e.target.files[0]))}/>
+                    <input type='file' id='upload-avatar' accept='.png,.jfif,.jpeg,.jpg,.pjp,.pjpeg' onChange={changeFile}/>
                 </div>
                 <div className='profile-edit-data'>
                     <div className='profile-edit-item'>

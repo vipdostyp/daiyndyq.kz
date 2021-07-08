@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom';
 import axios from 'axios';
 
 import Header from 'components/header';
+import Footer from 'components/footer'
 
 import { QuestRoute } from 'core/questRoute';
 import { UserRoute } from 'core/userRoute';
@@ -16,24 +17,27 @@ import Register from 'controllers/register';
 import Profile from 'controllers/profile';
 import ProfileEdit from 'controllers/profileEdit';
 
-axios.defaults.baseURL = 'https://api.daiyndyq.kz';
+axios.defaults.baseURL = 'http://localhost:4000';
 
 const App = () => {
     return (
-        <div className='wrapper'>
+        <>
             <Header/>
-            <Switch>
-                <Route exact path='/' component={Index}/>
-                <Route path='/posts' component={Posts}/>
-                <Route path='/post/:id' component={SinglePost}/>
+            <div className='content'>
+                <Switch>
+                    <Route exact path='/' component={Index}/>
+                    <Route path='/posts' component={Posts}/>
+                    <Route path='/post/:id' component={SinglePost}/>
 
-                <QuestRoute path='/login' component={Login}/>
-                <QuestRoute path='/register' component={Register}/>
+                    <QuestRoute path='/login' component={Login}/>
+                    <QuestRoute path='/register' component={Register}/>
 
-                <UserRoute path='/profile/edit' component={ProfileEdit}/>
-                <UserRoute path='/profile' component={Profile}/>
-            </Switch>
-        </div>
+                    <UserRoute path='/profile/edit' component={ProfileEdit}/>
+                    <UserRoute path='/profile' component={Profile}/>
+                </Switch>
+            </div>
+            <Footer/>
+        </>
     );
 }
 

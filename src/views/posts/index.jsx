@@ -1,3 +1,4 @@
+import Sidebar from 'components/sidebar';
 import Article from 'components/article';
 import './posts.css';
 
@@ -9,7 +10,7 @@ const Posts = ({posts}) => {
                     <Article id={data.id} poster={data.poster} title={data.title} comments={data.comments} key={i}/>
                 ))}
             </div>
-            <div className='posts-box-aside'></div>
+            <Sidebar/>
         </section>
     );
 }

@@ -6,7 +6,7 @@ const Profile = ({data, exit}) => {
     return (
         <section className='profile-box box container'>
             <div className='profile-data'>
-                <img className='profile-avatar' src={'https://api.daiyndyq.kz/' + data.avatar} alt='avatar'/>
+                <img className='profile-avatar' src={'http://localhost:4000' + data.avatar} alt='avatar'/>
 
                 <div className='profile-info'>
                     <div className='profile-username'>{data.first_name + ' ' + data.last_name}</div>

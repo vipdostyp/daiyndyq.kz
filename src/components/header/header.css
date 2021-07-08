@@ -19,9 +19,11 @@ header {
 /* header-logo start */
 
 .header-logo {
+    width: 175px;
     display: flex;
     align-items: center;
 }
+.cls-1{fill:#7e75b3;}
 .header-logo-icon {
     background: var(--purple);
     width: 50px;
@@ -69,7 +71,7 @@ header {
     display: flex;
     align-items: center;
 }
-.header-account > .button {
+.header-account > .second {
     margin-right: 15px;
 }
 

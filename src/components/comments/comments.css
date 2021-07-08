@@ -1,6 +1,6 @@
 .single-post-comments {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-gap: 25px;
     padding-top: 25px;
     border-top: 1px solid rgba(0, 0, 0, 0.25)
 }
@@ -8,7 +8,6 @@
 
 .single-post-comment {
     display: flex;
-    margin-bottom: 25px;
 }
 .single-post-comment-avatar {
     width: 50px;
@@ -30,8 +29,11 @@
 
 .single-post-add-comment {
     display: flex;
-    margin-bottom: 25px;
+    align-items: flex-end;
 }
-.single-post-add-comment > input {
+.single-post-add-comment > textarea {
     margin-right: 15px;
+}
+.single-post-add-comment > button {
+    height: 48px;
 }
